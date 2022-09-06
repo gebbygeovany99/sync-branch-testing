@@ -6,7 +6,7 @@ on:
 
 jobs:
   sync-branches:
-    if: ${{ github.head.ref != 'development' }}
+    if: ${{ github.event.pull_request.head.ref != 'development' }}
     runs-on: ubuntu-latest
     name: Syncing branches
     steps:
