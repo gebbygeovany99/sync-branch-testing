@@ -6,7 +6,7 @@ on:
 
 jobs:
   sync-branches:
-    if: ${{ startsWith(github.event.head_commit.message, 'build') }}
+    if: ${{ github.event.pull_request.base.ref !== 'development' }}
     runs-on: ubuntu-latest
     name: Syncing branches
     steps:
