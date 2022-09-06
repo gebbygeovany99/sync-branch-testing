@@ -6,6 +6,7 @@ on:
 
 jobs:
   sync-branches:
+    if: "contains(github.event.head_commit.message, 'build')"
     runs-on: ubuntu-latest
     name: Syncing branches
     steps:
