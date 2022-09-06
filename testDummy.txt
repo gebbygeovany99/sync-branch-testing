@@ -7,3 +7,5 @@ another_test
 another_test2
 another_testing
 pm_checking
+with_hotfix
+with_hotfix_true
