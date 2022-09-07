@@ -6,7 +6,7 @@ on:
 
 jobs:
   sync-branches:
-    if: ${{ startsWith(github.event.head_commit.message, 'hotfix:') }}
+    if: ${{ contains(github.event.head_commit.message, 'Hotfix-') }}
     runs-on: ubuntu-latest
     name: Syncing branches
     steps:
